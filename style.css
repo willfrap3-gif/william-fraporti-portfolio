@@ -412,7 +412,10 @@ body.light .actions button{
 
     width:450px;
     height:450px;
-
+    animation:
+      
+    will-change:transform;
+    animation: float 6s ease-in-out infinite;
     border-radius:50%;
 
     position:relative;
@@ -683,20 +686,25 @@ body.light .orb{
     beamFloat3 22s ease-in-out infinite alternate;
 }
 
-@keyframes beamFloat1{
+@keyframes float{
 
-    from{
+    0%{
         transform:
-        rotate(-18deg)
-        translateX(0px);
+        translateY(0px)
+        rotate(0deg);
     }
 
-    to{
+    50%{
         transform:
-        rotate(-18deg)
-        translateX(180px);
+        translateY(-8px)
+        rotate(.3deg);
     }
 
+    100%{
+        transform:
+        translateY(0px)
+        rotate(0deg);
+    }
 }
 
 @keyframes beamFloat2{
